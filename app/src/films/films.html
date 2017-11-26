@@ -1,0 +1,50 @@
+<div class="Container">
+        <div class="row">
+
+              <div class="col-xs-12 col-md-4 col-md-offset-2">
+                    <img src="{{vm.film.picture}}">
+              </div>
+              <div class="col-xs-12 col-md-4">
+                    <h4>FilmName:</h4>{{vm.film.name}}
+              </div>
+
+        </div>
+
+  <div class="row">
+
+          <div class="col-xs-12 col-md-4 col-md-offset-2">
+                <h4>Description:</h4>{{vm.film.description}}
+          </div>
+          <div class="col-xs-12 col-md-4">
+                  <h4>Rating:</h4>{{vm.film.rating}}
+          </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+            <h4 ng-click="vm.Next()">Release Date:</h4>{{vm.film.release_year}}
+    </div>
+    <div class="col-xs-12 col-md-4">
+            <h4>Ticket Price:</h4>{{vm.film.ticket_price}}
+    </div>
+
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+            <h4>Country:</h4>{{vm.film.country}}
+    </div>
+    <div class="col-xs-12 col-md-4">
+            <h4>Genre:</h4>{{vm.film.categories}}
+    </div>
+
+  </div>
+
+</div>
+<div class="row">
+      <button  class="btn btn-primary btn-lg" ng-disabled="vm.filmIndex<=0 " ng-click="vm.Previous()">Previous</button>
+      <button  class="btn btn-primary btn-lg" ng-disabled="vm.filmIndex >=vm.films.length" ng-click="vm.Next()">Next</button>
+
+</div>
